@@ -135,15 +135,21 @@ dictnuevo(l)
 
 
 
+#Print time 
+from datetime import datetime
+def printTime(tarea):
+    
+    print(f"{tarea} terminada el {datetime.now()}")
 
+printTime("prueba")
 
+reverso = [1,2,3,4]
 
-#14
-def a():
-    print(1)
-    b()
-    print(2)
-def b():
-    print(3)
-a()
-b()
+def rev(lista):
+    lista.reverse()
+    print(lista)
+    return lista
+
+print(reverso)
+rev(reverso)
+print(reverso)
