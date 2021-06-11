@@ -14,12 +14,57 @@ z = [ {'x': 10, 'y': 20} ]
 x[1][0]=15
 print(x)
 
+#Con funcion
+def cambia(arr):
+    print(f"antes: {arr}")
+    for i in range (len(arr)):
+        for m in range(len(arr[i])):
+            print(arr[i][m])
+            if arr[i][m] == 10:
+                arr[i][m] = 15
+    print(f"despues: {arr}")
+
+x = [ [5,2,3], [10,8,9] ] 
+cambia(x)
+
+
+
 #b.- Cambia el apellido del primer alumno de 'Jordan' a 'Bryant'
 students[0]["last_name"]="Bryant"
 print(students)
+
+students = [
+     {'first_name':  'Michael', 'last_name' : 'Jordan'},
+     {'first_name' : 'John', 'last_name' : 'Rosales'}
+]
+
+def cambiapellido(lista):
+    print(f" antes:{lista}")
+    for i in range(len(lista)):
+        if lista[i]["last_name"]=="Jordan":
+            lista[i]["last_name"]="Bryant"
+    return lista
+change =cambiapellido(students)
+print(f"despues {change}")
+
 #c.- En el directorio sports_directory, cambia 'Messi' a 'Andres'
 sports_directory["soccer"][0]="Andres"
 print(sports_directory)
+
+sports_directory = {
+    'basketball' : ['Kobe', 'Jordan', 'James', 'Curry'],
+    'soccer' : ['Messi', 'Ronaldo', 'Rooney']
+}
+def cambianombre(lista):
+    print(f" antes:{lista}")
+    for i in range(len(lista)):
+        
+        if lista["soccer"][i]=="Messi":
+            lista["soccer"][i]="Andres"
+    return lista
+mesias =cambianombre(sports_directory)
+print(f"despues {mesias}")
+
 #d.- Camba el valor 20 en z a 30
 z[0]["y"]=30
 print(type(z),z)
