@@ -6,9 +6,9 @@ class Underscore:
    
     def find(self, iterable, callback):
 
-        for x in range (len(iterable)):
-            if(iterable[x]>4):
-                return iterable[x]
+        for x in iterable:
+            if callback(x):
+                return x
         return "HOLAfind"
     
     def filter(self, iterable, callback):
